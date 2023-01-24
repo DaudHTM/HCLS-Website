@@ -1,0 +1,31 @@
+
+.navContainer{
+    top:0;
+    left: 0;
+    background: black;
+    position: fixed;
+    height:100px;
+    width:100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+ul{
+    display:flex;
+    flex-direction: row;
+}
+li {
+    list-style: none;
+    
+}
+a{
+    text-decoration: none;
+    color:white;
+    padding:1rem;
+    font-size: 1.3em;
+}
+a:hover{
+    color:rgb(179, 179, 179);
+}
