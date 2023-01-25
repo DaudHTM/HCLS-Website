@@ -14,11 +14,22 @@
     
 }
 img{
-    margin-left: 2.5em;
+    margin-left: 2em;
 }
 img:hover{
     cursor: pointer;
    
+}
+ul>div{
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    height:100%;
+    width:100%;
+    justify-content: center;
+    margin-left: 2em;
+    
 }
 ul{
     display:flex;
@@ -26,24 +37,30 @@ ul{
     position: relative;
     align-items: center;
     height:100%;
-
+    width:100%;
+    justify-content: space-between;
     margin-left: 2em;
-    
+  
+ 
 }
+
+
+
 li {
     list-style: none;
     
 }
-li>a{
+ul>div>li>a , a{
     text-decoration: none;
     color:rgb(0, 0, 0);
     padding:1.3rem;
     margin:1rem;
     font-size: 1.25em;
     border-bottom:2px solid rgba(0, 0, 0, 0);
+    transition: all .08s ease-in-out;
 }
-ul>li>a:hover{
-    color:rgb(85, 85, 85);
+ul>div>li>a:hover{
+    color:rgb(73, 73, 73);
     border-bottom: 3px solid rgb(62, 153, 189);
 }
 
@@ -51,9 +68,96 @@ ul>li>a:hover{
     border-radius: 2em;
     border:2px solid rgb(1, 62, 87);
     padding: .55em 1em;
+    margin-right: 2em;
     transition: .07s all ease-in-out;
+    
+   
+}
+ul>li{
+
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 .contactBtn:hover{
     background: rgb(62, 153, 189);
+}
+
+.openBtn{
+    display:none;
+}
+
+@media only screen and (max-width: 900px){
+    li>a{
+        font-size: .9rem;
+        margin: 0em;
+    }
+}
+@media only screen and (max-width: 650px){
+    .navContainer{
+        align-items: center;
+    
+    }
+    .openBtn{
+        display: inline;
+        position: relative;
+        height:80px;
+        width: 80px;
+        border:none;
+        margin-right: 2em;
+        z-index: 34343;
+        background: rgba(0, 0, 0, 0);
+        
+    }
+    
+  ul{
+    position: absolute;
+    background: rgb(255, 248, 235);
+    height:100vh;
+    width: 50vw;
+    justify-content: space-evenly;
+    flex-direction: column;
+    right:50%;
+    top:-20px;
+    padding: 0;
+    transition: all .5s ease-in-out;
+
+  }
+  ul>div{
+    position: relative;
+    
+    width:100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    
+  }
+  div>li{
+    position: relative;
+    width: 100%;
+    height:85px;
+  }
+  ul>li{
+    height:200px;
+  }
+  ul>div>li>a:hover{
+    color:rgb(73, 73, 73);
+    border-bottom: none;
+    background: rgb(255, 238, 206);
+    
+}
+ul>div>li>a{
+    color:rgb(19, 19, 19);
+    border-bottom:2px solid black;
+    width:100%;
+    
+}
+  
 }
