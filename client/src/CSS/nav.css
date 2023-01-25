@@ -2,30 +2,58 @@
 .navContainer{
     top:0;
     left: 0;
-    background: black;
+    background: linear-gradient(rgb(219, 219, 219),rgb(255, 255, 255));
     position: fixed;
-    height:100px;
+    height:90px;
     width:100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
+    
+}
+img{
+    margin-left: 2.5em;
+}
+img:hover{
+    cursor: pointer;
+   
 }
 ul{
     display:flex;
     flex-direction: row;
+    position: relative;
+    align-items: center;
+    height:100%;
+
+    margin-left: 2em;
+    
 }
 li {
     list-style: none;
     
 }
-a{
+li>a{
     text-decoration: none;
-    color:white;
-    padding:1rem;
-    font-size: 1.3em;
+    color:rgb(0, 0, 0);
+    padding:1.3rem;
+    margin:1rem;
+    font-size: 1.25em;
+    border-bottom:2px solid rgba(0, 0, 0, 0);
 }
-a:hover{
-    color:rgb(179, 179, 179);
+ul>li>a:hover{
+    color:rgb(85, 85, 85);
+    border-bottom: 3px solid rgb(62, 153, 189);
+}
+
+.contactBtn{
+    border-radius: 2em;
+    border:2px solid rgb(1, 62, 87);
+    padding: .55em 1em;
+    transition: .07s all ease-in-out;
+}
+
+.contactBtn:hover{
+    background: rgb(62, 153, 189);
 }

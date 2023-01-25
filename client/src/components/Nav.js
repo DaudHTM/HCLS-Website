@@ -1,21 +1,24 @@
 import React from 'react'
 import logo from '../assets/hazardlogo.png';
 import '../CSS/nav.css'
+import { Link } from 'react-router-dom';
+import {FaBars, FaTimes} from "react-icons/fa"
+
 function Nav() {
   return (
     <div className="navContainer">
-      <img alt="" href="#/" src={logo}  width="90px" />
-
-      <div className="btnContainer"> 
+      
+      <Link to="/" > <img alt="" src={logo}  width="90px" /> </Link>
+    
         <ul> 
-            <li><a href="#"> Home</a></li>
-            <li><a href="#"> About</a></li>
-            <li><a href="#"> Members</a></li>
-            <li><a href="#"> Dashboard</a></li>
-            <li><a href="#"> Contact</a></li>
+            <li><Link to="/" > Home </Link> </li>
+            <li><Link to="/" > About </Link> </li>
+            <li><Link to="/login" > Members </Link> </li>
+            <li><Link to="/login" > Dashboard </Link> </li>
+            
         </ul>
-        
-      </div>
+        <li><Link className="contactBtn" to="/" > Contact us </Link> </li>
+     
     </div>
   )
 }
