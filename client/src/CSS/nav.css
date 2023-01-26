@@ -28,7 +28,7 @@ ul>div{
     height:100%;
     width:100%;
     justify-content: center;
-    margin-left: 2em;
+    margin-left: 1.5em;
     
 }
 ul{
@@ -39,7 +39,7 @@ ul{
     height:100%;
     width:100%;
     justify-content: space-between;
-    margin-left: 2em;
+    margin-left: 1em;
   
  
 }
@@ -78,7 +78,7 @@ ul>li{
     position: relative;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content:space-evenly;
     align-items: center;
     flex-direction: row;
 }
@@ -92,12 +92,18 @@ ul>li{
 }
 
 @media only screen and (max-width: 900px){
-    li>a{
-        font-size: .9rem;
-        margin: 0em;
-    }
+ul>div>li>a , a{
+    padding:1rem;
+    margin:0rem;
+    font-size: 1.1em;
+    border-bottom:2px solid rgba(0, 0, 0, 0);
+    transition: all .08s ease-in-out;
 }
-@media only screen and (max-width: 650px){
+  ul>div,ul{
+    margin-left:0em;
+  }
+}
+@media only screen and (max-width: 600px){
     .navContainer{
         align-items: center;
     
@@ -124,14 +130,14 @@ ul>li{
     right:50%;
     top:-20px;
     padding: 0;
+    
     transition: all .5s ease-in-out;
 
   }
   ul>div{
     position: relative;
-    
     width:100%;
-    margin: 0;
+    margin: 1em 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -145,7 +151,9 @@ ul>li{
     height:85px;
   }
   ul>li{
-    height:200px;
+    height:90px;
+    margin-bottom:0em;
+    margin-right:1em;
   }
   ul>div>li>a:hover{
     color:rgb(73, 73, 73);
@@ -157,7 +165,12 @@ ul>div>li>a{
     color:rgb(19, 19, 19);
     border-bottom:2px solid black;
     width:100%;
+    margin-left:1.25em;
+    
     
 }
+  .contactBtn{
+    
+  }
   
 }
