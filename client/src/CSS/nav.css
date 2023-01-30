@@ -1,17 +1,27 @@
 
+*{
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap');
+    font-family: 'Source Sans Pro', sans-serif;
+}
 .navContainer{
     top:0;
     left: 0;
-    background: linear-gradient(rgb(219, 219, 219),rgb(255, 255, 255));
-    position: fixed;
-    height:90px;
+    background: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.042));
+    position: absolute;
+    height:105px;
     width:100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    transition: all .25s ease-in-out;
+    z-index: 213434;
+}
 
-    
+.activeBackground{
+    background: white;
+    height:90px;
+    position: fixed;
 }
 img{
     margin-left: 2em;
@@ -28,7 +38,7 @@ ul>div{
     height:100%;
     width:100%;
     justify-content: center;
-    margin-left: 2em;
+   
     
 }
 ul{
@@ -52,21 +62,29 @@ li {
 }
 ul>div>li>a , a{
     text-decoration: none;
-    color:rgb(0, 0, 0);
+    color:black;
     padding:1.3rem;
     margin:1rem;
     font-size: 1.25em;
     border-bottom:2px solid rgba(0, 0, 0, 0);
     transition: all .08s ease-in-out;
 }
+.activeText>div>li>a,.activeText>li>a{
+   
+    color: white;
+}
+.unactiveText>div>li>a:hover,.unactiveText>li>a:hover{
+    color:rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(219, 205, 0);
+}
 ul>div>li>a:hover{
-    color:rgb(73, 73, 73);
-    border-bottom: 3px solid rgb(62, 153, 189);
+    color:rgb(129, 129, 129);
+    border-bottom: 3px solid rgb(219, 205, 0);
 }
 
 .contactBtn{
     border-radius: 2em;
-    border:2px solid rgb(1, 62, 87);
+    border:2px solid rgb(219, 205, 0);
     padding: .55em 1em;
     margin-right: 2em;
     transition: .07s all ease-in-out;
@@ -84,7 +102,7 @@ ul>li{
 }
 
 .contactBtn:hover{
-    background: rgb(62, 153, 189);
+    background: rgb(219, 205, 0);
 }
 
 .openBtn{
@@ -100,6 +118,9 @@ ul>li{
 @media only screen and (max-width: 650px){
     .navContainer{
         align-items: center;
+        position: fixed;
+        height:80px;
+        background: white;
     
     }
     .openBtn{
@@ -110,13 +131,13 @@ ul>li{
         border:none;
         margin-right: 2em;
         z-index: 34343;
-        background: rgba(0, 0, 0, 0);
+        background: rgba(112, 105, 105, 0);
         
     }
     
   ul{
     position: absolute;
-    background: rgb(255, 248, 235);
+    background: rgba(255, 255, 255,.99);
     height:100vh;
     width: 50vw;
     justify-content: space-evenly;
@@ -148,16 +169,26 @@ ul>li{
     height:200px;
   }
   ul>div>li>a:hover{
-    color:rgb(73, 73, 73);
+   
     border-bottom: none;
-    background: rgb(255, 238, 206);
+    background: rgba(255, 255, 255,.99);
     
 }
 ul>div>li>a{
-    color:rgb(19, 19, 19);
-    border-bottom:2px solid black;
+    color:rgb(0, 0, 0);
+    border-bottom:2px solid rgb(0, 0, 0);
     width:100%;
     
+}
+.activeText>div>li>a,.activeText>li>a{
+   
+    color: black;
+}
+.contactBtn{
+   border:2px solid black;
+}
+.contactBtn:hover{
+    background: rgb(211, 211, 211);
 }
   
 }

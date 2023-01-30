@@ -12,6 +12,8 @@ function Nav() {
 
   const [windowSize, setWindowSize] = useState(getWindowSize());
  
+  const [navBarBackground, setNavBarBackground] = useState(false);
+
   useEffect(() => {
     function handleWindowResize() {
       setWindowSize(getWindowSize());
@@ -24,14 +26,24 @@ function Nav() {
     };
   }, []);
 
+  const changeNav = () => {
+    console.log(window.scrollY)
+    if(window.scrollY > 90 && windowSize.innerWidth>650){
+      setNavBarBackground(true);
+    }else{
+      setNavBarBackground(false);
+    }
+  }
+
+  window.addEventListener('scroll',changeNav);
 
   return (
-    <div className="navContainer">
+    <div className={navBarBackground ? 'navContainer activeBackground' : 'navContainer'}>
       
       <Link to="/" > <img alt="" src={logo}  width="95px" /> </Link>
 
          <button  className="openBtn" onClick={() => setToggleNav(!toggleNav)}><FaBars/></button>
-        <ul  style={{right: toggleNav && windowSize.innerWidth<650 ? "-70%":"0%"}} > 
+        <ul className={!navBarBackground ? 'activeText' : 'unactiveText'} style={{right: toggleNav && windowSize.innerWidth<650 ? "-70%":"0%"}} > 
 
             <div>
             <li><Link to="/" > Home </Link> </li>
@@ -45,6 +57,7 @@ function Nav() {
 
        
     </div>
+    
   )
 }
 function getWindowSize() {

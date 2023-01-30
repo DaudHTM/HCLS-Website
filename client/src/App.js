@@ -13,6 +13,7 @@ import Axios from "axios";
 function App() {
   
   return (
+    <div> 
     <BrowserRouter>
       <Nav />
 
@@ -25,8 +26,11 @@ function App() {
    
     </BrowserRouter>
 
-    
+    <div className="df"></div>
 
+    </div>
+    
+  
   );
 }
 
