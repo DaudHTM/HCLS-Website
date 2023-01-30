@@ -74,17 +74,17 @@ ul>div>li>a , a{
     color: white;
 }
 .unactiveText>div>li>a:hover,.unactiveText>li>a:hover{
-    color:rgb(255, 255, 255);
+    color:rgb(82, 82, 82);
     border-bottom: 3px solid rgb(219, 205, 0);
 }
 ul>div>li>a:hover{
     color:rgb(129, 129, 129);
-    border-bottom: 3px solid rgb(219, 205, 0);
+    border-bottom: 4px solid rgb(192, 179, 0);
 }
 
 .contactBtn{
     border-radius: 2em;
-    border:2px solid rgb(219, 205, 0);
+    border:2px solid rgb(255, 240, 35);
     padding: .55em 1em;
     margin-right: 2em;
     transition: .07s all ease-in-out;
@@ -102,7 +102,7 @@ ul>li{
 }
 
 .contactBtn:hover{
-    background: rgb(219, 205, 0);
+    background: rgb(255, 238, 0);
 }
 
 .openBtn{
