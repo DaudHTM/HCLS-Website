@@ -6,7 +6,7 @@
 .navContainer{
     top:0;
     left: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.042));
+    background: linear-gradient(rgba(0, 0, 0, 0.17),rgba(0, 0, 0, 0.012));
     position: absolute;
     height:105px;
     width:100vw;

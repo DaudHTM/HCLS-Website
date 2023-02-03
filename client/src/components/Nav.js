@@ -51,7 +51,7 @@ function Nav() {
             <li><Link to="/login" > Members </Link> </li>
             <li><Link to="/login" > Dashboard </Link> </li>
             </div>
-            <li><Link className="contactBtn" to="/" > Contact</Link> </li>
+            <li><Link className="contactBtn" to="/contact" > Contact</Link> </li>
         </ul>
         
 

@@ -7,7 +7,7 @@ import Nav from "./components/Nav";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-
+import Contact from "./pages/Contact";
 import Axios from "axios";
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/login" element={<Login/>} />
+        <Route path="/contact" element={<Contact/>} />
 
       </Routes>
    
