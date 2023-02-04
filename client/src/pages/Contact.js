@@ -23,9 +23,10 @@ function Contact() {
     </div>
 
     <div className="right form">
-  <NetlifyForm name='Contact' action='/thanks' honeypotName='bot-field'>
+  <NetlifyForm name='Contact' action='/thanks' honeypotName='bot-field' className="form">
     {({ handleChange, success, error }) => (
       <>
+      <div className="formsContainer">
         <Honeypot />
         {success && <p>Thanks for contacting us!</p>}
         {error && (
@@ -33,6 +34,10 @@ function Contact() {
         )}
         <div>
           <label htmlFor='name'>Name:</label>
+          <input type='text' name='name' id='name' onChange={handleChange} />
+        </div>
+        <div>
+          <label htmlFor='name'>Email:</label>
           <input type='text' name='name' id='name' onChange={handleChange} />
         </div>
         <div>
@@ -47,6 +52,7 @@ function Contact() {
         </div>
         <div>
           <button className="submitButton"  type='submit'>Submit</button>
+        </div>
         </div>
       </>
     )}
