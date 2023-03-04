@@ -7,8 +7,10 @@ import Nav from "./components/Nav";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Axios from "axios";
+
 
 function App() {
   
@@ -16,11 +18,15 @@ function App() {
     <div> 
     <BrowserRouter>
       <Nav />
+      <Home/>
+        <About/>
+        <Contact/>
 
       <Routes>
-        <Route path="/" element={<Home/>} />
+   
+     
         <Route path="/login" element={<Login/>} />
-        <Route path="/contact" element={<Contact/>} />
+       
 
       </Routes>
    
