@@ -8,7 +8,7 @@ function Contact() {
 
   return (
     
-    <div className="contactContainer">
+    <div className="contactContainer" id='contact'>
         <div className="navBackground"> </div>
         <div className="backgroundImgContact"> 
             <div className="contactTextContainer">

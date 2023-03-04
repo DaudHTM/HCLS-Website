@@ -1,12 +1,13 @@
 import React from 'react'
 import "../CSS/home.css"
+import {AnimatePresence, motion} from 'framer-motion/dist/framer-motion';
 function Home() {
   return (
-    <div className='homeContainer'>
+    <div className='homeContainer' id='home'>
       <div className='homeBackgroundLogo'> </div> 
       <div className='backgroundImage'> 
         <div className='backgroundImgTextContainer'> 
-          <div className='imgTextContainer'>
+          <motion.div transition={{type:"tween",duration:.5}}  animate={{y:0,scale:1,opacity:1}} initial={{y:-100,scale:.7,opacity:.4}}   className='imgTextContainer'>
             <p4>
               FTC Robotics Team
             </p4>
@@ -16,7 +17,7 @@ function Home() {
             <p3> 
               HCLS Robotics Club
             </p3>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className=''>
