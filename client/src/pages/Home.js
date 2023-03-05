@@ -5,7 +5,8 @@ function Home() {
   return (
     <div className='homeContainer' id='home'>
       <div className='homeBackgroundLogo'> </div> 
-      <div className='backgroundImage'> 
+      <div className='backgroundImage'>
+         
         <div className='backgroundImgTextContainer'> 
           <motion.div transition={{type:"tween",duration:.5}}  animate={{y:0,scale:1,opacity:1}} initial={{y:-100,scale:.7,opacity:.4}}   className='imgTextContainer'>
             <p4>

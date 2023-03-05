@@ -4,4 +4,93 @@
     top:0;
     left:0;
     position: relative;
+    background: white;
+    padding:150px 0px;
+    opacity: .94;
+    margin: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+ 
+    font-family: 'Tilt Neon', cursive;
+    padding:0 2em;
+    gap:5em
+    
+}
+
+.libraryImageContainer{
+    position: relative;
+    background: url("../assets/libraryImage.jpg");
+    border-radius: 10px;
+    height:clamp(70vh,100%,70vh);
+    width: clamp(500px,40%,600px);
+    background-size: cover;
+    
+}
+.libraryImageContainer{
+    content:"Miller Branch Howard County Library System";
+}
+.clubContainer{
+    height:100%;
+    height:clamp(70vh,100%,70vh);
+    width: clamp(500px,30%,900px);
+    
+    padding: .1em 0em;
+ 
+    
+
+}
+.clubTitle{
+    font-weight: bold;
+    font-size: 1.8em;
+    display: block;
+    margin-bottom: .9em;
+}
+.clubInformation{
+   
+    font-size: 1.7em;
+    
+}
+.learnMore{
+    font-size: .75em;
+    text-decoration: underline;
+    color:rgb(0, 167, 167);
+    
+}
+@media only screen and (max-width: 1100px){
+.clubInformation{
+    font-size:1.35em;
+}
+@media only screen and (max-width: 650px){
+.aboutContainer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:6em 0em ;
+    padding:0em 2em;
+    height:1300px;
+   
+}
+.libraryImageContainer{
+    margin-bottom: 0em;
+}
+.clubContainer{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.clubTitle{
+
+}
+.clubInformation{
+    padding-left: 2em;
+    margin: 0;
+}
+}
+
 }
