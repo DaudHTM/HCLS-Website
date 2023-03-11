@@ -6,7 +6,7 @@ import {FaBars, FaTimes} from "react-icons/fa";
 import { useState } from 'react';
 import { useEffect } from 'react';
 import {AnimatePresence, motion} from 'framer-motion/dist/framer-motion';
-function Nav() {
+function Nav(props) {
 
   const [toggleNav, setToggleNav] = useState(true);
 
@@ -26,16 +26,20 @@ function Nav() {
     };
   }, []);
 
-  const changeNav = () => {
-    console.log(window.scrollY)
-    if(window.scrollY > 90 && windowSize.innerWidth>650){
+  useEffect(()=>{
+    if(props.yscroll>90){
       setNavBarBackground(true);
-    }else{
+    }
+    else{
       setNavBarBackground(false);
     }
-  }
 
-  window.addEventListener('scroll',changeNav);
+
+  },[props.yscroll])
+
+  
+
+
 
   return (
     <motion.div transition={{type:"tween",duration:.5}}  animate={{y:0}} initial={{y:-100}}  className={navBarBackground ? 'navContainer activeBackground' : 'navContainer'}>

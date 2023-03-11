@@ -7,3 +7,7 @@
     padding:0;
     @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Tilt+Neon&display=swap");
   }
+
+.appContainer{
+    overflow-x: hidden;
+}

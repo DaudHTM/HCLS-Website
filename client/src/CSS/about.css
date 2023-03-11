@@ -1,13 +1,28 @@
-.aboutContainer{
-    width: 100%;
-    height:1000px;
+.aboutSectionContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    width:100%;
+    height:2200px;
     top:0;
     left:0;
-    position: relative;
+
     background: white;
     padding:150px 0px;
     opacity: .94;
     margin: 0;
+
+}
+
+
+.aboutContainer,.aboutTeamContainer{
+    width: 100%;
+    height:1100px;
+
+    position: relative;
+
 
     display: flex;
     flex-direction: row;
@@ -21,7 +36,7 @@
     
 }
 
-.libraryImageContainer{
+.libraryImageContainer,.teamPicture{
     position: relative;
     background: url("../assets/libraryImage.jpg");
     border-radius: 10px;
@@ -30,9 +45,13 @@
     background-size: cover;
     
 }
-.libraryImageContainer{
+.teamPicture{
+    background: url("../assets/teamImage.jpg");
+}
+.libraryImageContainer::after{
     content:"Miller Branch Howard County Library System";
 }
+
 .clubContainer{
     height:100%;
     height:clamp(70vh,100%,70vh);
@@ -72,6 +91,7 @@
     margin:6em 0em ;
     padding:0em 2em;
     height:1300px;
+    gap:10;
    
 }
 .libraryImageContainer{
@@ -83,9 +103,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 0;
+    padding-top: 0;
 }
 .clubTitle{
-
+    padding-top:0;
 }
 .clubInformation{
     padding-left: 2em;

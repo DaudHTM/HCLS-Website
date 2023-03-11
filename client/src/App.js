@@ -1,6 +1,6 @@
 
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 
 import './App.css';
 import Nav from "./components/Nav";
@@ -14,12 +14,20 @@ import Axios from "axios";
 
 function App() {
   
+
+  const [yScroll,setyScroll] = useState(0);
+
+const setScroll = () =>{
+  setyScroll(window.scrollY);
+
+}
+  window.addEventListener('scroll',setScroll)
   return (
-    <div> 
+    <div className="appContainer"> 
     <BrowserRouter>
-      <Nav />
-      <Home/>
-        <About/>
+      <Nav yscroll={yScroll}/>
+      <Home yscroll ={yScroll}/>
+        <About yscroll={yScroll}/>
         <Contact/>
 
       <Routes>
