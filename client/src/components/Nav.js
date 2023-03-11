@@ -51,7 +51,7 @@ function Nav(props) {
 
             <div>
             <li><Link onClick={() => setToggleNav(true)} smooth={true} offset={-10} duration={500} activeClass="active" to="home" > Home </Link></li>
-            <li><Link Link smooth={true} offset={-10} duration={500} activeClass="active" to="about" > About </Link> </li>
+            <li><Link onClick={() => setToggleNav(true)} Link smooth={true} offset={-10} duration={500} activeClass="active" to="about" > About </Link> </li>
             <li><Link onClick={() => setToggleNav(true)}  to="/login" > Members </Link> </li>
             <li><Link onClick={() => setToggleNav(true)}  to="/login" > Dashboard </Link> </li>
             </div>

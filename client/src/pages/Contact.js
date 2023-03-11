@@ -9,7 +9,7 @@ function Contact() {
   return (
     
     <div className="contactContainer" id='contact'>
-        <div className="navBackground"> </div>
+     
         <div className="backgroundImgContact"> 
             <div className="contactTextContainer">
             <p3>REACH OUT TO US!</p3>
